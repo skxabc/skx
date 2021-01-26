@@ -1,0 +1,3 @@
+/home/shikaixun/test/cmake_learn/cmake/t1/build/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/test/cmake_learn/cmake/t1/build/CMakeFiles/hello.dir
+/home/shikaixun/test/cmake_learn/cmake/t1/build/CMakeFiles/edit_cache.dir
