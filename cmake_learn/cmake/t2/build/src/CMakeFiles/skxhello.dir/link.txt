@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libskxhello.so -o libskxhello.so CMakeFiles/skxhello.dir/main.c.o 
