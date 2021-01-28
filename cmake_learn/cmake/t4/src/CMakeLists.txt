@@ -1,0 +1,15 @@
+#INCLUDE_DIRECTORIES(/usr/include/hello)
+FIND_PATH(myheader hello.h)
+MESSAGE(STATUS "myheader:" ${myheader})
+if(myheader)
+INCLUDE_DIRECTORIES(${myheader})
+endif(myheader)
+#LINK_DIRECTORIES(/usr/lib/hello)
+FIND_LIBRARY(mylib libhello.so)
+MESSAGE(STATUS "mylib:" ${mylib})
+
+ADD_EXECUTABLE(main main.c)
+if(mylib)
+TARGET_LINK_LIBRARIES(main ${mylib})
+endif(mylib)
+

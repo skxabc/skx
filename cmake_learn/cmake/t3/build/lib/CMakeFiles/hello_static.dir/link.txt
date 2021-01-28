@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../skxshare/libhello.a  CMakeFiles/hello_static.dir/hello.o
+/usr/bin/ranlib ../skxshare/libhello.a
