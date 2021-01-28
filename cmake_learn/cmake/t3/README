@@ -1,0 +1,11 @@
+t3目录的目标是创建同名静态、动态共享库，并将静态库和动态库（同名）以及头文件安装到系统目录：/usr/lib和/usr/include/hello
+编译命令：
+cmake -DCMAKE_INSTALL_PREFIX=/usr ../
+make
+sudo make install(不使用sudo，会报copy错误)
+
+
+tips：
+1 安装同名静态库和动态库时，命令为：INSTALL（TARGETS hello hello_static ...）,如果只写hello，只会安装动态库，加上hello_static后安装的是与动态库同名的静态库（libhello.a）
+  实验结论就是如果已经使用命令：SET_TARGET_PROPERTIES(hello_static PROPERTIES OUTPUT_NAME hello)将hello_static重命名为hello，其他地方操作hello_static的命令最终生成
+  结果都是以重命名后的hello的名字存在
