@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.13)
+PROJECT(MAIN)
+INCLUDE(cmake/FindHELLO.cmake)
+MESSAGE(STATUS "skx cmake path")
+SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
+ADD_SUBDIRECTORY(src)
+MESSAGE(STATUS "cmake module path:${CMAKE_MODULE_PATH}")

@@ -1,0 +1,7 @@
+/home/shikaixun/test/skx/cmake_learn/cmake/t4/build/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t4/build/CMakeFiles/test.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t4/build/CMakeFiles/edit_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t4/build/bin/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t4/build/bin/CMakeFiles/edit_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t4/build/bin/CMakeFiles/main.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t4/build/bin/CMakeFiles/test.dir
