@@ -1,7 +1,7 @@
 MESSAGE(STATUS "skx FindHELLO.cmake path")
 FIND_PATH(HELLO_INCLUDE_DIR hello.h /usr/include/hello /usr/local/include/hello)
 message(STATUS "HELLO_INCLUDE_DIR:${HELLO_INCLUDE_DIR}")
-FIND_LIBRARY(HELLO_LIBRARY NAMES hello PATH /usr/lib/hello /usr/lib /usr/local/lib)
+FIND_LIBRARY(HELLO_LIBRARY NAMES hello PATHS /usr/lib/hello /usr/lib /usr/local/lib)
 message(STATUS "HELLO_LIBRARY:${HELLO_LIBRARY}")
 IF(HELLO_INCLUDE_DIR AND HELLO_LIBRARY)
     SET(HELLO_FOUND TRUE)
