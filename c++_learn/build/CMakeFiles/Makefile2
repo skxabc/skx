@@ -53,64 +53,112 @@ CMAKE_BINARY_DIR = /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: bin/all
+all: src/classSize/all
+all: src/lambda/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: bin/preinstall
+preinstall: src/classSize/preinstall
+preinstall: src/lambda/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: bin/clean
+clean: src/classSize/clean
+clean: src/lambda/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory bin
+# Directory level rules for directory src/classSize
 
 # Recursive "all" directory target.
-bin/all: bin/CMakeFiles/skx_lambda.dir/all
+src/classSize/all: src/classSize/CMakeFiles/skx_classsize.dir/all
 
-.PHONY : bin/all
+.PHONY : src/classSize/all
 
 # Recursive "preinstall" directory target.
-bin/preinstall:
+src/classSize/preinstall:
 
-.PHONY : bin/preinstall
+.PHONY : src/classSize/preinstall
 
 # Recursive "clean" directory target.
-bin/clean: bin/CMakeFiles/skx_lambda.dir/clean
+src/classSize/clean: src/classSize/CMakeFiles/skx_classsize.dir/clean
 
-.PHONY : bin/clean
+.PHONY : src/classSize/clean
 
 #=============================================================================
-# Target rules for target bin/CMakeFiles/skx_lambda.dir
+# Directory level rules for directory src/lambda
+
+# Recursive "all" directory target.
+src/lambda/all: src/lambda/CMakeFiles/skx_lambda.dir/all
+
+.PHONY : src/lambda/all
+
+# Recursive "preinstall" directory target.
+src/lambda/preinstall:
+
+.PHONY : src/lambda/preinstall
+
+# Recursive "clean" directory target.
+src/lambda/clean: src/lambda/CMakeFiles/skx_lambda.dir/clean
+
+.PHONY : src/lambda/clean
+
+#=============================================================================
+# Target rules for target src/classSize/CMakeFiles/skx_classsize.dir
 
 # All Build rule for target.
-bin/CMakeFiles/skx_lambda.dir/all:
-	$(MAKE) -f bin/CMakeFiles/skx_lambda.dir/build.make bin/CMakeFiles/skx_lambda.dir/depend
-	$(MAKE) -f bin/CMakeFiles/skx_lambda.dir/build.make bin/CMakeFiles/skx_lambda.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=1,2 "Built target skx_lambda"
-.PHONY : bin/CMakeFiles/skx_lambda.dir/all
+src/classSize/CMakeFiles/skx_classsize.dir/all:
+	$(MAKE) -f src/classSize/CMakeFiles/skx_classsize.dir/build.make src/classSize/CMakeFiles/skx_classsize.dir/depend
+	$(MAKE) -f src/classSize/CMakeFiles/skx_classsize.dir/build.make src/classSize/CMakeFiles/skx_classsize.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=1,2 "Built target skx_classsize"
+.PHONY : src/classSize/CMakeFiles/skx_classsize.dir/all
 
 # Build rule for subdir invocation for target.
-bin/CMakeFiles/skx_lambda.dir/rule: cmake_check_build_system
+src/classSize/CMakeFiles/skx_classsize.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/skx_lambda.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 src/classSize/CMakeFiles/skx_classsize.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 0
-.PHONY : bin/CMakeFiles/skx_lambda.dir/rule
+.PHONY : src/classSize/CMakeFiles/skx_classsize.dir/rule
 
 # Convenience name for target.
-skx_lambda: bin/CMakeFiles/skx_lambda.dir/rule
+skx_classsize: src/classSize/CMakeFiles/skx_classsize.dir/rule
+
+.PHONY : skx_classsize
+
+# clean rule for target.
+src/classSize/CMakeFiles/skx_classsize.dir/clean:
+	$(MAKE) -f src/classSize/CMakeFiles/skx_classsize.dir/build.make src/classSize/CMakeFiles/skx_classsize.dir/clean
+.PHONY : src/classSize/CMakeFiles/skx_classsize.dir/clean
+
+#=============================================================================
+# Target rules for target src/lambda/CMakeFiles/skx_lambda.dir
+
+# All Build rule for target.
+src/lambda/CMakeFiles/skx_lambda.dir/all:
+	$(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/depend
+	$(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=3,4 "Built target skx_lambda"
+.PHONY : src/lambda/CMakeFiles/skx_lambda.dir/all
+
+# Build rule for subdir invocation for target.
+src/lambda/CMakeFiles/skx_lambda.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/lambda/CMakeFiles/skx_lambda.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 0
+.PHONY : src/lambda/CMakeFiles/skx_lambda.dir/rule
+
+# Convenience name for target.
+skx_lambda: src/lambda/CMakeFiles/skx_lambda.dir/rule
 
 .PHONY : skx_lambda
 
 # clean rule for target.
-bin/CMakeFiles/skx_lambda.dir/clean:
-	$(MAKE) -f bin/CMakeFiles/skx_lambda.dir/build.make bin/CMakeFiles/skx_lambda.dir/clean
-.PHONY : bin/CMakeFiles/skx_lambda.dir/clean
+src/lambda/CMakeFiles/skx_lambda.dir/clean:
+	$(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/clean
+.PHONY : src/lambda/CMakeFiles/skx_lambda.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

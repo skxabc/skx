@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/bin/CMakeFiles/progress.marks
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 bin/all
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/lambda/CMakeFiles/progress.marks
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/lambda/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 bin/clean
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/lambda/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,12 +97,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/lambda/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 bin/preinstall
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/lambda/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -111,33 +111,33 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-bin/CMakeFiles/skx_lambda.dir/rule:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 bin/CMakeFiles/skx_lambda.dir/rule
-.PHONY : bin/CMakeFiles/skx_lambda.dir/rule
+src/lambda/CMakeFiles/skx_lambda.dir/rule:
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/lambda/CMakeFiles/skx_lambda.dir/rule
+.PHONY : src/lambda/CMakeFiles/skx_lambda.dir/rule
 
 # Convenience name for target.
-skx_lambda: bin/CMakeFiles/skx_lambda.dir/rule
+skx_lambda: src/lambda/CMakeFiles/skx_lambda.dir/rule
 
 .PHONY : skx_lambda
 
 # fast build rule for target.
 skx_lambda/fast:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f bin/CMakeFiles/skx_lambda.dir/build.make bin/CMakeFiles/skx_lambda.dir/build
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/build
 .PHONY : skx_lambda/fast
 
 # target to build an object file
 lambda.o:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f bin/CMakeFiles/skx_lambda.dir/build.make bin/CMakeFiles/skx_lambda.dir/lambda.o
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/lambda.o
 .PHONY : lambda.o
 
 # target to preprocess a source file
 lambda.i:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f bin/CMakeFiles/skx_lambda.dir/build.make bin/CMakeFiles/skx_lambda.dir/lambda.i
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/lambda.i
 .PHONY : lambda.i
 
 # target to generate assembly for a file
 lambda.s:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f bin/CMakeFiles/skx_lambda.dir/build.make bin/CMakeFiles/skx_lambda.dir/lambda.s
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/lambda.s
 .PHONY : lambda.s
 
 # Help Target

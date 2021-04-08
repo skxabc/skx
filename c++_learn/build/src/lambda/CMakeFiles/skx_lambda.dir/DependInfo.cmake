@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/lambda/lambda.cpp" "/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/bin/CMakeFiles/skx_lambda.dir/lambda.o"
+  "/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/lambda/lambda.cpp" "/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/lambda/CMakeFiles/skx_lambda.dir/lambda.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

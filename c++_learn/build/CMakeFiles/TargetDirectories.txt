@@ -1,5 +1,8 @@
 /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles/rebuild_cache.dir
 /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles/edit_cache.dir
-/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/bin/CMakeFiles/rebuild_cache.dir
-/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/bin/CMakeFiles/edit_cache.dir
-/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/bin/CMakeFiles/skx_lambda.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/classSize/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/classSize/CMakeFiles/edit_cache.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/classSize/CMakeFiles/skx_classsize.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/lambda/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/lambda/CMakeFiles/edit_cache.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/lambda/CMakeFiles/skx_lambda.dir

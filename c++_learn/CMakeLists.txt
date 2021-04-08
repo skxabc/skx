@@ -1,2 +1,5 @@
-PROJECT(LAMBDA)
-add_subdirectory(src/lambda bin)
+PROJECT(skx)
+# set(SRC_CODE_DIR ${PROJECT_SOURCE_DIR}/src/classSize ${PROJECT_SOURCE_DIR}/src/lambda)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/classSize)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/lambda)

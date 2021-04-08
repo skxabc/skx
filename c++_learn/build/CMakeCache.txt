@@ -149,7 +149,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=LAMBDA
+CMAKE_PROJECT_NAME:STATIC=skx
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -216,14 +216,14 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //Single output directory for building all executables.
 EXECUTABLE_OUTPUT_PATH:PATH=
 
-//Value Computed by CMake
-LAMBDA_BINARY_DIR:STATIC=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/bin
-
-//Value Computed by CMake
-LAMBDA_SOURCE_DIR:STATIC=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/lambda
-
 //Single output directory for building all libraries.
 LIBRARY_OUTPUT_PATH:PATH=
+
+//Value Computed by CMake
+skx_BINARY_DIR:STATIC=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/lambda
+
+//Value Computed by CMake
+skx_SOURCE_DIR:STATIC=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/lambda
 
 
 ########################
@@ -330,7 +330,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
