@@ -1,0 +1,39 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            // "program": "${workspaceFolder}/build_for_vscode/bin/test_librws_creation",
+            // "args": ["ws://aiservice.haier.net/access"],
+            // "args": ["ws://ai.haier.net:11000/access/ai-access/websocket/speech?token=TGTE3NT3KSLQUBP2UU1FRQ88KGNW00&appId=MB-SDOT20-0000&clientId=04BCA81E5DF48A14823F80CFE463AB5E&appVer=2.3.21&sdkVer=1.3.26&userId=123456&speechDevId=ACB1EE26DF1F"],
+            // "args": ["ws://203.130.41.37:11000/access/ai-access/websocket/speech?token=TGTE3NT3KSLQUBP2UU1FRQ88KGNW00&appId=MB-SDOT20-0000&clientId=04BCA81E5DF48A14823F80CFE463AB5E&appVer=2.3.21&sdkVer=1.3.26&userId=123456&speechDevId=ACB1EE26DF1F"],
+            // "args": [""],
+            
+            "program": "${workspaceFolder}/skx/c/build/bin/C_SKX",
+            "args": ["node", "enp0s31f6", "/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/test_audio/dwakeup.pcm"],
+            // "args": ["/home/shikaixun/Code/audio_test_x31/test.txt", "dwakeup.pcm", "ai.haier.net", "11000", "/yanzheng/ai-access/websocket/speechDemo"],
+            // "args": ["monitor", "enp0s31f6"],
+
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,++++++++++++++++
+            "MIMode": "gdb",
+            //"coreDumpPath": "/home/shikaixun/coredump",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
