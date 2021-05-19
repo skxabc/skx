@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/speex.dir/mytest.c.o CMakeFiles/speex.dir/myspeex.c.o  -o speex  -Wl,-rpath,/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/haier_speex/lib/speex/lib ../../lib/speex/lib/libspeex.so -lm 

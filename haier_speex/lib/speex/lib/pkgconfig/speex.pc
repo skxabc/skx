@@ -1,0 +1,15 @@
+# libspeex pkg-config source file
+
+prefix=/home/shikaixun/code2/aisdk/3rdparty/3rdprebuild/speex/linux_x64/speex
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: speex
+Description: Speex is an audio codec tuned for speech
+Version: 1.2.0
+Requires:
+Conflicts:
+Libs: -L${libdir} -lspeex
+Libs.private: -lm
+Cflags: -I${includedir}
