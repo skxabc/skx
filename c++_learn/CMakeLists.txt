@@ -1,6 +1,12 @@
 PROJECT(skx)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 # set(SRC_CODE_DIR ${PROJECT_SOURCE_DIR}/src/classSize ${PROJECT_SOURCE_DIR}/src/lambda)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/classSize)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/lambda)
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/file)
+add_subdirectory(${PROJECT_SOURCE_DIR}/src/helloWorld)

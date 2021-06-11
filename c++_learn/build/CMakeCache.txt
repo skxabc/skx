@@ -220,10 +220,10 @@ EXECUTABLE_OUTPUT_PATH:PATH=
 LIBRARY_OUTPUT_PATH:PATH=
 
 //Value Computed by CMake
-skx_BINARY_DIR:STATIC=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/lambda
+skx_BINARY_DIR:STATIC=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/helloWorld
 
 //Value Computed by CMake
-skx_SOURCE_DIR:STATIC=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/lambda
+skx_SOURCE_DIR:STATIC=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/helloWorld
 
 
 ########################
@@ -330,7 +330,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

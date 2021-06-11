@@ -55,18 +55,24 @@ CMAKE_BINARY_DIR = /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++
 # The main recursive "all" target.
 all: src/classSize/all
 all: src/lambda/all
+all: src/file/all
+all: src/helloWorld/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: src/classSize/preinstall
 preinstall: src/lambda/preinstall
+preinstall: src/file/preinstall
+preinstall: src/helloWorld/preinstall
 
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: src/classSize/clean
 clean: src/lambda/clean
+clean: src/file/clean
+clean: src/helloWorld/clean
 
 .PHONY : clean
 
@@ -87,6 +93,42 @@ src/classSize/preinstall:
 src/classSize/clean: src/classSize/CMakeFiles/skx_classsize.dir/clean
 
 .PHONY : src/classSize/clean
+
+#=============================================================================
+# Directory level rules for directory src/file
+
+# Recursive "all" directory target.
+src/file/all: src/file/CMakeFiles/filetst.dir/all
+
+.PHONY : src/file/all
+
+# Recursive "preinstall" directory target.
+src/file/preinstall:
+
+.PHONY : src/file/preinstall
+
+# Recursive "clean" directory target.
+src/file/clean: src/file/CMakeFiles/filetst.dir/clean
+
+.PHONY : src/file/clean
+
+#=============================================================================
+# Directory level rules for directory src/helloWorld
+
+# Recursive "all" directory target.
+src/helloWorld/all: src/helloWorld/CMakeFiles/hello.dir/all
+
+.PHONY : src/helloWorld/all
+
+# Recursive "preinstall" directory target.
+src/helloWorld/preinstall:
+
+.PHONY : src/helloWorld/preinstall
+
+# Recursive "clean" directory target.
+src/helloWorld/clean: src/helloWorld/CMakeFiles/hello.dir/clean
+
+.PHONY : src/helloWorld/clean
 
 #=============================================================================
 # Directory level rules for directory src/lambda
@@ -113,7 +155,7 @@ src/lambda/clean: src/lambda/CMakeFiles/skx_lambda.dir/clean
 src/classSize/CMakeFiles/skx_classsize.dir/all:
 	$(MAKE) -f src/classSize/CMakeFiles/skx_classsize.dir/build.make src/classSize/CMakeFiles/skx_classsize.dir/depend
 	$(MAKE) -f src/classSize/CMakeFiles/skx_classsize.dir/build.make src/classSize/CMakeFiles/skx_classsize.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=1,2 "Built target skx_classsize"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=5,6 "Built target skx_classsize"
 .PHONY : src/classSize/CMakeFiles/skx_classsize.dir/all
 
 # Build rule for subdir invocation for target.
@@ -140,7 +182,7 @@ src/classSize/CMakeFiles/skx_classsize.dir/clean:
 src/lambda/CMakeFiles/skx_lambda.dir/all:
 	$(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/depend
 	$(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=3,4 "Built target skx_lambda"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=7,8 "Built target skx_lambda"
 .PHONY : src/lambda/CMakeFiles/skx_lambda.dir/all
 
 # Build rule for subdir invocation for target.
@@ -159,6 +201,60 @@ skx_lambda: src/lambda/CMakeFiles/skx_lambda.dir/rule
 src/lambda/CMakeFiles/skx_lambda.dir/clean:
 	$(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/clean
 .PHONY : src/lambda/CMakeFiles/skx_lambda.dir/clean
+
+#=============================================================================
+# Target rules for target src/file/CMakeFiles/filetst.dir
+
+# All Build rule for target.
+src/file/CMakeFiles/filetst.dir/all:
+	$(MAKE) -f src/file/CMakeFiles/filetst.dir/build.make src/file/CMakeFiles/filetst.dir/depend
+	$(MAKE) -f src/file/CMakeFiles/filetst.dir/build.make src/file/CMakeFiles/filetst.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=1,2 "Built target filetst"
+.PHONY : src/file/CMakeFiles/filetst.dir/all
+
+# Build rule for subdir invocation for target.
+src/file/CMakeFiles/filetst.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/file/CMakeFiles/filetst.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 0
+.PHONY : src/file/CMakeFiles/filetst.dir/rule
+
+# Convenience name for target.
+filetst: src/file/CMakeFiles/filetst.dir/rule
+
+.PHONY : filetst
+
+# clean rule for target.
+src/file/CMakeFiles/filetst.dir/clean:
+	$(MAKE) -f src/file/CMakeFiles/filetst.dir/build.make src/file/CMakeFiles/filetst.dir/clean
+.PHONY : src/file/CMakeFiles/filetst.dir/clean
+
+#=============================================================================
+# Target rules for target src/helloWorld/CMakeFiles/hello.dir
+
+# All Build rule for target.
+src/helloWorld/CMakeFiles/hello.dir/all:
+	$(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/depend
+	$(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=3,4 "Built target hello"
+.PHONY : src/helloWorld/CMakeFiles/hello.dir/all
+
+# Build rule for subdir invocation for target.
+src/helloWorld/CMakeFiles/hello.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/helloWorld/CMakeFiles/hello.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 0
+.PHONY : src/helloWorld/CMakeFiles/hello.dir/rule
+
+# Convenience name for target.
+hello: src/helloWorld/CMakeFiles/hello.dir/rule
+
+.PHONY : hello
+
+# clean rule for target.
+src/helloWorld/CMakeFiles/hello.dir/clean:
+	$(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/clean
+.PHONY : src/helloWorld/CMakeFiles/hello.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

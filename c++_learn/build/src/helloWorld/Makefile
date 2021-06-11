@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/src/helloWorld/CMakeFiles/progress.marks
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/helloWorld/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/helloWorld/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,70 +97,48 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/helloWorld/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/helloWorld/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named skx_classsize
+# Convenience name for target.
+src/helloWorld/CMakeFiles/hello.dir/rule:
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f CMakeFiles/Makefile2 src/helloWorld/CMakeFiles/hello.dir/rule
+.PHONY : src/helloWorld/CMakeFiles/hello.dir/rule
 
-# Build rule for target.
-skx_classsize: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 skx_classsize
-.PHONY : skx_classsize
+# Convenience name for target.
+hello: src/helloWorld/CMakeFiles/hello.dir/rule
 
-# fast build rule for target.
-skx_classsize/fast:
-	$(MAKE) -f src/classSize/CMakeFiles/skx_classsize.dir/build.make src/classSize/CMakeFiles/skx_classsize.dir/build
-.PHONY : skx_classsize/fast
-
-#=============================================================================
-# Target rules for targets named skx_lambda
-
-# Build rule for target.
-skx_lambda: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 skx_lambda
-.PHONY : skx_lambda
-
-# fast build rule for target.
-skx_lambda/fast:
-	$(MAKE) -f src/lambda/CMakeFiles/skx_lambda.dir/build.make src/lambda/CMakeFiles/skx_lambda.dir/build
-.PHONY : skx_lambda/fast
-
-#=============================================================================
-# Target rules for targets named filetst
-
-# Build rule for target.
-filetst: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 filetst
-.PHONY : filetst
-
-# fast build rule for target.
-filetst/fast:
-	$(MAKE) -f src/file/CMakeFiles/filetst.dir/build.make src/file/CMakeFiles/filetst.dir/build
-.PHONY : filetst/fast
-
-#=============================================================================
-# Target rules for targets named hello
-
-# Build rule for target.
-hello: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 hello
 .PHONY : hello
 
 # fast build rule for target.
 hello/fast:
-	$(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/build
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/build
 .PHONY : hello/fast
+
+# target to build an object file
+hello.o:
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/hello.o
+.PHONY : hello.o
+
+# target to preprocess a source file
+hello.i:
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/hello.i
+.PHONY : hello.i
+
+# target to generate assembly for a file
+hello.s:
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/hello.s
+.PHONY : hello.s
 
 # Help Target
 help:
@@ -170,10 +148,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... skx_classsize"
-	@echo "... skx_lambda"
-	@echo "... filetst"
 	@echo "... hello"
+	@echo "... hello.o"
+	@echo "... hello.i"
+	@echo "... hello.s"
 .PHONY : help
 
 
@@ -185,6 +163,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
