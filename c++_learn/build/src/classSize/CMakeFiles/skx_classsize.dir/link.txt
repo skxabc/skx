@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/skx_classsize.dir/classsizeof.o  -o ../../bin/skx_classsize 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/skx_classsize.dir/classsizeof.o  -o ../../bin/skx_classsize 

@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/hello.dir/hello.o  -o ../../bin/hello 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/hello.dir/hello.o  -o ../../bin/hello  -lpthread 

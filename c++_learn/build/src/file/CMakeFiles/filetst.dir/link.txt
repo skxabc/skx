@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/filetst.dir/file_use.o  -o ../../bin/filetst 
+/usr/bin/c++  -g  -rdynamic CMakeFiles/filetst.dir/file_use.o  -o ../../bin/filetst 

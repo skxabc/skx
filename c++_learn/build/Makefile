@@ -162,6 +162,19 @@ hello/fast:
 	$(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/build
 .PHONY : hello/fast
 
+#=============================================================================
+# Target rules for targets named wsClient
+
+# Build rule for target.
+wsClient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wsClient
+.PHONY : wsClient
+
+# fast build rule for target.
+wsClient/fast:
+	$(MAKE) -f src/webocketClient/CMakeFiles/wsClient.dir/build.make src/webocketClient/CMakeFiles/wsClient.dir/build
+.PHONY : wsClient/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,6 +187,7 @@ help:
 	@echo "... skx_lambda"
 	@echo "... filetst"
 	@echo "... hello"
+	@echo "... wsClient"
 .PHONY : help
 
 

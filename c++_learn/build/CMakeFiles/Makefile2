@@ -57,6 +57,7 @@ all: src/classSize/all
 all: src/lambda/all
 all: src/file/all
 all: src/helloWorld/all
+all: src/webocketClient/all
 
 .PHONY : all
 
@@ -65,6 +66,7 @@ preinstall: src/classSize/preinstall
 preinstall: src/lambda/preinstall
 preinstall: src/file/preinstall
 preinstall: src/helloWorld/preinstall
+preinstall: src/webocketClient/preinstall
 
 .PHONY : preinstall
 
@@ -73,6 +75,7 @@ clean: src/classSize/clean
 clean: src/lambda/clean
 clean: src/file/clean
 clean: src/helloWorld/clean
+clean: src/webocketClient/clean
 
 .PHONY : clean
 
@@ -147,6 +150,24 @@ src/lambda/preinstall:
 src/lambda/clean: src/lambda/CMakeFiles/skx_lambda.dir/clean
 
 .PHONY : src/lambda/clean
+
+#=============================================================================
+# Directory level rules for directory src/webocketClient
+
+# Recursive "all" directory target.
+src/webocketClient/all: src/webocketClient/CMakeFiles/wsClient.dir/all
+
+.PHONY : src/webocketClient/all
+
+# Recursive "preinstall" directory target.
+src/webocketClient/preinstall:
+
+.PHONY : src/webocketClient/preinstall
+
+# Recursive "clean" directory target.
+src/webocketClient/clean: src/webocketClient/CMakeFiles/wsClient.dir/clean
+
+.PHONY : src/webocketClient/clean
 
 #=============================================================================
 # Target rules for target src/classSize/CMakeFiles/skx_classsize.dir
@@ -255,6 +276,33 @@ hello: src/helloWorld/CMakeFiles/hello.dir/rule
 src/helloWorld/CMakeFiles/hello.dir/clean:
 	$(MAKE) -f src/helloWorld/CMakeFiles/hello.dir/build.make src/helloWorld/CMakeFiles/hello.dir/clean
 .PHONY : src/helloWorld/CMakeFiles/hello.dir/clean
+
+#=============================================================================
+# Target rules for target src/webocketClient/CMakeFiles/wsClient.dir
+
+# All Build rule for target.
+src/webocketClient/CMakeFiles/wsClient.dir/all:
+	$(MAKE) -f src/webocketClient/CMakeFiles/wsClient.dir/build.make src/webocketClient/CMakeFiles/wsClient.dir/depend
+	$(MAKE) -f src/webocketClient/CMakeFiles/wsClient.dir/build.make src/webocketClient/CMakeFiles/wsClient.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles --progress-num=9,10 "Built target wsClient"
+.PHONY : src/webocketClient/CMakeFiles/wsClient.dir/all
+
+# Build rule for subdir invocation for target.
+src/webocketClient/CMakeFiles/wsClient.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 src/webocketClient/CMakeFiles/wsClient.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/build/CMakeFiles 0
+.PHONY : src/webocketClient/CMakeFiles/wsClient.dir/rule
+
+# Convenience name for target.
+wsClient: src/webocketClient/CMakeFiles/wsClient.dir/rule
+
+.PHONY : wsClient
+
+# clean rule for target.
+src/webocketClient/CMakeFiles/wsClient.dir/clean:
+	$(MAKE) -f src/webocketClient/CMakeFiles/wsClient.dir/build.make src/webocketClient/CMakeFiles/wsClient.dir/clean
+.PHONY : src/webocketClient/CMakeFiles/wsClient.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

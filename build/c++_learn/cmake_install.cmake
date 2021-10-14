@@ -42,6 +42,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/classSize/cmake_install.cmake")
   include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/lambda/cmake_install.cmake")
   include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/file/cmake_install.cmake")
+  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/helloWorld/cmake_install.cmake")
+  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient/cmake_install.cmake")
 
 endif()
 

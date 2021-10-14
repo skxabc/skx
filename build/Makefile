@@ -162,6 +162,32 @@ filetst/fast:
 	$(MAKE) -f c++_learn/src/file/CMakeFiles/filetst.dir/build.make c++_learn/src/file/CMakeFiles/filetst.dir/build
 .PHONY : filetst/fast
 
+#=============================================================================
+# Target rules for targets named hello
+
+# Build rule for target.
+hello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hello
+.PHONY : hello
+
+# fast build rule for target.
+hello/fast:
+	$(MAKE) -f c++_learn/src/helloWorld/CMakeFiles/hello.dir/build.make c++_learn/src/helloWorld/CMakeFiles/hello.dir/build
+.PHONY : hello/fast
+
+#=============================================================================
+# Target rules for targets named wsClient
+
+# Build rule for target.
+wsClient: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wsClient
+.PHONY : wsClient
+
+# fast build rule for target.
+wsClient/fast:
+	$(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build
+.PHONY : wsClient/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -174,6 +200,8 @@ help:
 	@echo "... skx_classsize"
 	@echo "... skx_lambda"
 	@echo "... filetst"
+	@echo "... hello"
+	@echo "... wsClient"
 .PHONY : help
 
 

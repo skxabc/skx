@@ -16,5 +16,11 @@
 /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/file/CMakeFiles/rebuild_cache.dir
 /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/file/CMakeFiles/edit_cache.dir
 /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/file/CMakeFiles/filetst.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/helloWorld/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/helloWorld/CMakeFiles/edit_cache.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/helloWorld/CMakeFiles/hello.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient/CMakeFiles/edit_cache.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient/CMakeFiles/wsClient.dir
 /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/cmake_learn/CMakeFiles/rebuild_cache.dir
 /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/cmake_learn/CMakeFiles/edit_cache.dir
