@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/skx_lambda.dir/lambda.o  -o ../../bin/skx_lambda 
