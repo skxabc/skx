@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/helloWorld/hello.cpp
+iostream
+-
+string.h
+-
+fstream
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+pthread.h
+-
+

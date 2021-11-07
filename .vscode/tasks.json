@@ -1,0 +1,26 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cpp build for as",
+            // compile tts for android
+            // "command": "if [ ! -d \"./build\" ]; then  mkdir build && cd build && cmake -DCMAKE_SYSTEM_VERSION=19 -DCMAKE_ANDROID_STL_TYPE=c++_static -DCMAKE_ANDROID_ARCH_ABI=armeabi-v7a -DBUILD_DOT_DEV_3NOD=ON -DBUILD_HAIER_WAKEUP=ON -DCMAKE_TOOLCHAIN_FILE=../platforms/android/android.cmake ../ && make; else cd build && make; fi",
+            
+            // compile distwakeup for ubuntu
+            // BUILD_FOR_DW only for master
+            // "command": "if [ ! -d \"./build\" ]; then  mkdir build && cd build && cmake  -DBUILD_TEST=ON -DCMAKE_BUILD_TYPE=Debug -DBUILD_DWAKEUP=ON -DBUILD_DWAKEUP_TEST=ON -DRWS_OPT_TESTS=ON ../ && make; else cd build && make; fi",
+            // "command": "if [ ! -d \"./build\" ]; then  mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_DWAKEUP=ON -DBUILD_DWAKEUP_TEST=ON -DRWS_OPT_TESTS=ON -DBUILD_WEBSOCKET_TEST=ON -DBUILD_TEST=ON ../ && make; else cd build && make; fi",
+            //"command": "if [ ! -d \"./build\" ]; then  mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_DWAKEUP=ON -DBUILD_DWAKEUP_TEST=ON -DRWS_OPT_TESTS=OFF -DBUILD_WEBSOCKET_TEST=OFF -DBUILD_TEST=OFF -DBUILD_PORTER=ON -DBUILD_PORTER_TEST=ON ../ && make; else cd build && make; fi",
+            "command": "if [ ! -d \"./build\" ]; then  mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Debug  ../ && make -j; else cd build && make -j; fi",
+            // "command": "if [ ! -d \"./build\" ]; then  mkdir build && cd build && cmake -DBUILD_TEST=ON -DCMAKE_BUILD_TYPE=Debug  ../ && make -j; else cd build && make -j; fi",
+        
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

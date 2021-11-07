@@ -1,0 +1,10 @@
+message(STATUS "CMakeLists.txt project enter")
+PROJECT(HELLO)
+cmake_minimum_required(VERSION 3.13)
+ADD_SUBDIRECTORY(src)
+ADD_SUBDIRECTORY(doc)
+
+INSTALL(FILES COPYRIGHT README DESTINATION share/doc/cmake/t2)
+INSTALL(PROGRAMS runhello.sh DESTINATION bin)
+INSTALL(DIRECTORY doc/ DESTINATION share/doc/cmake/t2)
+message(STATUS "CMakeLists.txt project leave")

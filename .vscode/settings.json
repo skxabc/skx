@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.txt": "cpp",
+        "functional": "cpp",
+        "*.ipp": "c",
+        "bitset": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "*.tcc": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "new": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "regex": "cpp"
+    }
+}

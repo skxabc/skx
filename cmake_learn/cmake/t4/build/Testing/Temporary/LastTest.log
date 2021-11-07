@@ -1,0 +1,19 @@
+Start testing: Jan 28 15:54 CST
+----------------------------------------------------------
+1/1 Testing: mytest
+1/1 Test: mytest
+Command: "/home/shikaixun/test/skx/cmake_learn/cmake/t4/build/bin/main"
+Directory: /home/shikaixun/test/skx/cmake_learn/cmake/t4/build
+"mytest" start time: Jan 28 15:54 CST
+Output:
+----------------------------------------------------------
+Hello world
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"mytest" end time: Jan 28 15:54 CST
+"mytest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 28 15:54 CST

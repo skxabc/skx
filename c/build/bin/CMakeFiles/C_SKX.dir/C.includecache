@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c/src/2_dimentional_pointer.c
+stdio.h
+-
+

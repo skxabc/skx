@@ -1,0 +1,14 @@
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/CMakeFiles/install/strip.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/CMakeFiles/install.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/CMakeFiles/install/local.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/CMakeFiles/list_install_components.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/CMakeFiles/edit_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/lib/CMakeFiles/install/strip.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/lib/CMakeFiles/install/local.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/lib/CMakeFiles/hello_static.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/lib/CMakeFiles/hello.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/lib/CMakeFiles/edit_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/lib/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/lib/CMakeFiles/list_install_components.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t3/build/lib/CMakeFiles/install.dir

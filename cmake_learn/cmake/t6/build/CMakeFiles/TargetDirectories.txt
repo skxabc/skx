@@ -1,0 +1,5 @@
+/home/shikaixun/test/skx/cmake_learn/cmake/t6/build/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t6/build/CMakeFiles/edit_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t6/build/src/CMakeFiles/rebuild_cache.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t6/build/src/CMakeFiles/main.dir
+/home/shikaixun/test/skx/cmake_learn/cmake/t6/build/src/CMakeFiles/edit_cache.dir
