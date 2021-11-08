@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/regex.dir/regex.o  -o ../../bin/regex 
