@@ -23,3 +23,5 @@ int main(int argc, char **argv)
 //     cout<<"strlen(a):"<<b.length()<<endl;
 //     return 0;
 // }
+
+ 
