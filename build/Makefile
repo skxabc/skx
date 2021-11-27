@@ -188,6 +188,19 @@ wsClient/fast:
 	$(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build
 .PHONY : wsClient/fast
 
+#=============================================================================
+# Target rules for targets named mergefile
+
+# Build rule for target.
+mergefile: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mergefile
+.PHONY : mergefile
+
+# fast build rule for target.
+mergefile/fast:
+	$(MAKE) -f c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/build.make c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/build
+.PHONY : mergefile/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -202,6 +215,7 @@ help:
 	@echo "... filetst"
 	@echo "... hello"
 	@echo "... wsClient"
+	@echo "... mergefile"
 .PHONY : help
 
 

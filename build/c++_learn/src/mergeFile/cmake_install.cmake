@@ -1,4 +1,4 @@
-# Install script for directory: /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn
+# Install script for directory: /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/mergeFile
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,16 +35,5 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/classSize/cmake_install.cmake")
-  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/lambda/cmake_install.cmake")
-  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/file/cmake_install.cmake")
-  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/helloWorld/cmake_install.cmake")
-  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient/cmake_install.cmake")
-  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/mergeFile/cmake_install.cmake")
-
 endif()
 

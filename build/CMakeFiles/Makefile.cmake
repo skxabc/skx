@@ -16,6 +16,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../c++_learn/src/file/CMakeLists.txt"
   "../c++_learn/src/helloWorld/CMakeLists.txt"
   "../c++_learn/src/lambda/CMakeLists.txt"
+  "../c++_learn/src/mergeFile/CMakeLists.txt"
   "../c++_learn/src/webocketClient/CMakeLists.txt"
   "../c/CMakeLists.txt"
   "../c/src/CMakeLists.txt"
@@ -57,6 +58,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "c++_learn/src/file/CMakeFiles/CMakeDirectoryInformation.cmake"
   "c++_learn/src/helloWorld/CMakeFiles/CMakeDirectoryInformation.cmake"
   "c++_learn/src/webocketClient/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "c++_learn/src/mergeFile/CMakeFiles/CMakeDirectoryInformation.cmake"
   "cmake_learn/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -68,4 +70,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "c++_learn/src/file/CMakeFiles/filetst.dir/DependInfo.cmake"
   "c++_learn/src/helloWorld/CMakeFiles/hello.dir/DependInfo.cmake"
   "c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/DependInfo.cmake"
+  "c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/DependInfo.cmake"
   )
