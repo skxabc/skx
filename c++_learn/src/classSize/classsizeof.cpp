@@ -40,7 +40,7 @@ class FlyHorse:virtual public Horse,virtual public Bird
         FlyHorse(){}
         ~FlyHorse(){}
 };
-int main(char argv, char **args)
+int main(int argv, char **args)
 {
     Animal a;
     cout << "a: "<< sizeof(a) << endl;
