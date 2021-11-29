@@ -54,7 +54,7 @@ public:
             l2len++;
             tmp2 = tmp2->next;
         }
-        cout<<"l1 len:"<<l1len<<"l2 len:"<<l2len<<endl;
+        cout<<"l1 len:"<<l1len<<" l2 len:"<<l2len<<endl;
         if(l1len == l2len){
             while(l1 != nullptr){
                 if(flag == 1){
@@ -72,8 +72,10 @@ public:
                 l2 = l2->next;
                 l3->next = new ListNode(0);
                 l3 = l3->next;
-                if(flag != 1 && l1 == nullptr){
-                    delete l3;
+                cout<<"l3: "<<l3->val<<endl;
+                if(l1 == nullptr){
+                    cout<<"delte l3 "<<endl;
+                    // delete l3;
                     l3 = nullptr;
                 }
             }
