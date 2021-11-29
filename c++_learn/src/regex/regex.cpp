@@ -38,9 +38,9 @@ int main()
         auto ret = regex_match(line.c_str(), m, r);
         printf("m.size():%d\n",m.size());
         for(int i = 1; i < m.size(); i+=2){
-            printf("%s",m[i].str());
+            printf("%s",m[i]);
             printf("=");
-            printf("%s",m[i+1].str());
+            printf("%s",m[i+1]);
         }
     }
     return 0;
