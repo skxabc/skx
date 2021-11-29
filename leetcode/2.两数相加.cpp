@@ -70,14 +70,11 @@ public:
                 }
                 l1 = l1->next;
                 l2 = l2->next;
-                l3->next = new ListNode(0);
-                l3 = l3->next;
-                cout<<"l3: "<<l3->val<<endl;
-                if(l1 == nullptr){
-                    cout<<"delte l3 "<<endl;
-                    // delete l3;
-                    l3 = nullptr;
+                if(nullptr != l1){
+                    l3->next = new ListNode(0);
+                    l3 = l3->next;
                 }
+                cout<<"l3: "<<l3->val<<endl;
             }
             
         }else if(l1len < l2len){
@@ -105,8 +102,11 @@ public:
                 }
                 cout<<"l3: "<<l3->val<<endl;
                 l2 = l2->next;
-                l3->next = new ListNode(0);
-                l3 = l3->next;
+                if(nullptr != l2){
+                    l3->next = new ListNode(0);
+                    l3 = l3->next;
+                }
+                
             }
         }else if(l1len > l2len){
             cout<<"l1len > l2len"<<endl;
@@ -136,11 +136,16 @@ public:
                 }
                 cout<<"l3 3:"<<l3->val<<endl;
                 l1 = l1->next;
-                l3->next = new ListNode(0);
-                l3 = l3->next;
+                if(nullptr != l1){
+                    l3->next = new ListNode(0);
+                    l3 = l3->next;
+                }
+                
             }
         }
         if(flag == 1){
+            l3->next = new ListNode(0);
+            l3 = l3->next;
             l3->val = 1;
             l3->next = nullptr;
         }else{
