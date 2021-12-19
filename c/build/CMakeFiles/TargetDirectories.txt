@@ -1,5 +1,0 @@
-/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c/build/CMakeFiles/rebuild_cache.dir
-/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c/build/CMakeFiles/edit_cache.dir
-/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c/build/bin/CMakeFiles/rebuild_cache.dir
-/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c/build/bin/CMakeFiles/edit_cache.dir
-/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c/build/bin/CMakeFiles/C_SKX.dir

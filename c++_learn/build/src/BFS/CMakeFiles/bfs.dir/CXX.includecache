@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/shikaixun/Desktop/skx/c++_learn/src/BFS/BFS.cpp
+string
+-
+iostream
+-
+fstream
+-
+list
+-
+

@@ -1,2 +1,2 @@
 PROJECT(SKX)
-ADD_EXECUTABLE(C_SKX 2_dimentional_pointer.c)
+ADD_EXECUTABLE(C_SKX testhy.c)
