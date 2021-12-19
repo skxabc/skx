@@ -1,4 +1,4 @@
 project(skx)
-add_executable(wsClient server.cpp)
+add_executable(udp main.cpp)
 
 #target_link_libraries(hello pthread)
