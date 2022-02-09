@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "../../bin/wsClient"
   "../../bin/wsClient.pdb"
-  "CMakeFiles/wsClient.dir/main.o"
+  "CMakeFiles/wsClient.dir/server.o"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <unistd.h>
 using namespace std;
 typedef struct base_t{
     int64_t a;
@@ -13,9 +14,21 @@ int main(){
     cout << "test.a addr:" << &(test->a) << endl;
     cout << "test.a val:" << test->a <<endl;
 
-    cout <<"test.b addr:"<<&(test->b)<<endl;
-    cout <<"test.b val:" << test->b <<endl;石凯勋
-    return 0;
+int main(int argc, char **argv)
+{
+    // ofstream filetest;
+    // filetest.open("skxcppfiletest.txt",ios::trunc);
+    // filetest<<"sxiaowei"<<'\n';
+    // filetest<<"yangyuan"<<'\n';
+    int i = 0;
+    while(true){
+        sleep(10);
+        if(i == 0){
+            int * p = new int[16];
+        }
+        cout<<"index: "<<++i<< endl;
+    }
+    return 0;    
 }
 
 // int main(int argc, char **argv)

@@ -57,27 +57,27 @@ include c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/progress.make
 # Include the compile flags for this target's objects.
 include c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/flags.make
 
-c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/main.o: c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/flags.make
-c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/main.o: ../c++_learn/src/webocketClient/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/main.o"
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wsClient.dir/main.o -c /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/webocketClient/main.cpp
+c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/server.o: c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/flags.make
+c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/server.o: ../c++_learn/src/webocketClient/server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/server.o"
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wsClient.dir/server.o -c /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/webocketClient/server.cpp
 
-c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wsClient.dir/main.i"
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/webocketClient/main.cpp > CMakeFiles/wsClient.dir/main.i
+c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/server.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wsClient.dir/server.i"
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/webocketClient/server.cpp > CMakeFiles/wsClient.dir/server.i
 
-c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wsClient.dir/main.s"
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/webocketClient/main.cpp -o CMakeFiles/wsClient.dir/main.s
+c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/server.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wsClient.dir/server.s"
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/webocketClient/server.cpp -o CMakeFiles/wsClient.dir/server.s
 
 # Object files for target wsClient
 wsClient_OBJECTS = \
-"CMakeFiles/wsClient.dir/main.o"
+"CMakeFiles/wsClient.dir/server.o"
 
 # External object files for target wsClient
 wsClient_EXTERNAL_OBJECTS =
 
-c++_learn/bin/wsClient: c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/main.o
+c++_learn/bin/wsClient: c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/server.o
 c++_learn/bin/wsClient: c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make
 c++_learn/bin/wsClient: c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/wsClient"

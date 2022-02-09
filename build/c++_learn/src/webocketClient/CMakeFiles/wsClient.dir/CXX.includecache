@@ -6,29 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/webocketClient/main.cpp
+/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/c++_learn/src/webocketClient/server.cpp
 stdio.h
 -
-netdb.h
+string.h
+-
+errno.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/socket.h
 -
 netinet/in.h
 -
 arpa/inet.h
 -
-net/if.h
+sys/time.h
 -
-sys/ioctl.h
+sys/select.h
 -
-netinet/udp.h
--
-netinet/ip.h
--
-fcntl.h
--
-errno.h
--
-string.h
--
-unistd.h
+netdb.h
 -
 

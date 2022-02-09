@@ -201,6 +201,71 @@ mergefile/fast:
 	$(MAKE) -f c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/build.make c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/build
 .PHONY : mergefile/fast
 
+#=============================================================================
+# Target rules for targets named regex
+
+# Build rule for target.
+regex: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 regex
+.PHONY : regex
+
+# fast build rule for target.
+regex/fast:
+	$(MAKE) -f c++_learn/src/regex/CMakeFiles/regex.dir/build.make c++_learn/src/regex/CMakeFiles/regex.dir/build
+.PHONY : regex/fast
+
+#=============================================================================
+# Target rules for targets named cjsontest
+
+# Build rule for target.
+cjsontest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cjsontest
+.PHONY : cjsontest
+
+# fast build rule for target.
+cjsontest/fast:
+	$(MAKE) -f c++_learn/src/cjson/CMakeFiles/cjsontest.dir/build.make c++_learn/src/cjson/CMakeFiles/cjsontest.dir/build
+.PHONY : cjsontest/fast
+
+#=============================================================================
+# Target rules for targets named bfs
+
+# Build rule for target.
+bfs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bfs
+.PHONY : bfs
+
+# fast build rule for target.
+bfs/fast:
+	$(MAKE) -f c++_learn/src/BFS/CMakeFiles/bfs.dir/build.make c++_learn/src/BFS/CMakeFiles/bfs.dir/build
+.PHONY : bfs/fast
+
+#=============================================================================
+# Target rules for targets named dfs
+
+# Build rule for target.
+dfs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dfs
+.PHONY : dfs
+
+# fast build rule for target.
+dfs/fast:
+	$(MAKE) -f c++_learn/src/DFS/CMakeFiles/dfs.dir/build.make c++_learn/src/DFS/CMakeFiles/dfs.dir/build
+.PHONY : dfs/fast
+
+#=============================================================================
+# Target rules for targets named udp
+
+# Build rule for target.
+udp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 udp
+.PHONY : udp
+
+# fast build rule for target.
+udp/fast:
+	$(MAKE) -f c++_learn/src/udp/CMakeFiles/udp.dir/build.make c++_learn/src/udp/CMakeFiles/udp.dir/build
+.PHONY : udp/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,6 +281,11 @@ help:
 	@echo "... hello"
 	@echo "... wsClient"
 	@echo "... mergefile"
+	@echo "... regex"
+	@echo "... cjsontest"
+	@echo "... bfs"
+	@echo "... dfs"
+	@echo "... udp"
 .PHONY : help
 
 

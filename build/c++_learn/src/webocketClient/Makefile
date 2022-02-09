@@ -126,19 +126,19 @@ wsClient/fast:
 .PHONY : wsClient/fast
 
 # target to build an object file
-main.o:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build && $(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/main.o
-.PHONY : main.o
+server.o:
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build && $(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/server.o
+.PHONY : server.o
 
 # target to preprocess a source file
-main.i:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build && $(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/main.i
-.PHONY : main.i
+server.i:
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build && $(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/server.i
+.PHONY : server.i
 
 # target to generate assembly for a file
-main.s:
-	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build && $(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/main.s
-.PHONY : main.s
+server.s:
+	cd /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build && $(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/server.s
+.PHONY : server.s
 
 # Help Target
 help:
@@ -149,9 +149,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... wsClient"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 .PHONY : help
 
 

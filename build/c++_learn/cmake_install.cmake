@@ -45,6 +45,11 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/helloWorld/cmake_install.cmake")
   include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/webocketClient/cmake_install.cmake")
   include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/mergeFile/cmake_install.cmake")
+  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/regex/cmake_install.cmake")
+  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/cjson/cmake_install.cmake")
+  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/BFS/cmake_install.cmake")
+  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/DFS/cmake_install.cmake")
+  include("/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/c++_learn/src/udp/cmake_install.cmake")
 
 endif()
 

@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/wsClient.dir/main.o  -o ../../bin/wsClient 
+/usr/bin/c++    -rdynamic CMakeFiles/wsClient.dir/server.o  -o ../../bin/wsClient 

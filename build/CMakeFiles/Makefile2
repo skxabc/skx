@@ -101,6 +101,11 @@ c++_learn/all: c++_learn/src/file/all
 c++_learn/all: c++_learn/src/helloWorld/all
 c++_learn/all: c++_learn/src/webocketClient/all
 c++_learn/all: c++_learn/src/mergeFile/all
+c++_learn/all: c++_learn/src/regex/all
+c++_learn/all: c++_learn/src/cjson/all
+c++_learn/all: c++_learn/src/BFS/all
+c++_learn/all: c++_learn/src/DFS/all
+c++_learn/all: c++_learn/src/udp/all
 
 .PHONY : c++_learn/all
 
@@ -111,6 +116,11 @@ c++_learn/preinstall: c++_learn/src/file/preinstall
 c++_learn/preinstall: c++_learn/src/helloWorld/preinstall
 c++_learn/preinstall: c++_learn/src/webocketClient/preinstall
 c++_learn/preinstall: c++_learn/src/mergeFile/preinstall
+c++_learn/preinstall: c++_learn/src/regex/preinstall
+c++_learn/preinstall: c++_learn/src/cjson/preinstall
+c++_learn/preinstall: c++_learn/src/BFS/preinstall
+c++_learn/preinstall: c++_learn/src/DFS/preinstall
+c++_learn/preinstall: c++_learn/src/udp/preinstall
 
 .PHONY : c++_learn/preinstall
 
@@ -121,8 +131,67 @@ c++_learn/clean: c++_learn/src/file/clean
 c++_learn/clean: c++_learn/src/helloWorld/clean
 c++_learn/clean: c++_learn/src/webocketClient/clean
 c++_learn/clean: c++_learn/src/mergeFile/clean
+c++_learn/clean: c++_learn/src/regex/clean
+c++_learn/clean: c++_learn/src/cjson/clean
+c++_learn/clean: c++_learn/src/BFS/clean
+c++_learn/clean: c++_learn/src/DFS/clean
+c++_learn/clean: c++_learn/src/udp/clean
 
 .PHONY : c++_learn/clean
+
+#=============================================================================
+# Directory level rules for directory c++_learn/src/BFS
+
+# Recursive "all" directory target.
+c++_learn/src/BFS/all: c++_learn/src/BFS/CMakeFiles/bfs.dir/all
+
+.PHONY : c++_learn/src/BFS/all
+
+# Recursive "preinstall" directory target.
+c++_learn/src/BFS/preinstall:
+
+.PHONY : c++_learn/src/BFS/preinstall
+
+# Recursive "clean" directory target.
+c++_learn/src/BFS/clean: c++_learn/src/BFS/CMakeFiles/bfs.dir/clean
+
+.PHONY : c++_learn/src/BFS/clean
+
+#=============================================================================
+# Directory level rules for directory c++_learn/src/DFS
+
+# Recursive "all" directory target.
+c++_learn/src/DFS/all: c++_learn/src/DFS/CMakeFiles/dfs.dir/all
+
+.PHONY : c++_learn/src/DFS/all
+
+# Recursive "preinstall" directory target.
+c++_learn/src/DFS/preinstall:
+
+.PHONY : c++_learn/src/DFS/preinstall
+
+# Recursive "clean" directory target.
+c++_learn/src/DFS/clean: c++_learn/src/DFS/CMakeFiles/dfs.dir/clean
+
+.PHONY : c++_learn/src/DFS/clean
+
+#=============================================================================
+# Directory level rules for directory c++_learn/src/cjson
+
+# Recursive "all" directory target.
+c++_learn/src/cjson/all: c++_learn/src/cjson/CMakeFiles/cjsontest.dir/all
+
+.PHONY : c++_learn/src/cjson/all
+
+# Recursive "preinstall" directory target.
+c++_learn/src/cjson/preinstall:
+
+.PHONY : c++_learn/src/cjson/preinstall
+
+# Recursive "clean" directory target.
+c++_learn/src/cjson/clean: c++_learn/src/cjson/CMakeFiles/cjsontest.dir/clean
+
+.PHONY : c++_learn/src/cjson/clean
 
 #=============================================================================
 # Directory level rules for directory c++_learn/src/classSize
@@ -215,6 +284,42 @@ c++_learn/src/mergeFile/clean: c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/
 .PHONY : c++_learn/src/mergeFile/clean
 
 #=============================================================================
+# Directory level rules for directory c++_learn/src/regex
+
+# Recursive "all" directory target.
+c++_learn/src/regex/all: c++_learn/src/regex/CMakeFiles/regex.dir/all
+
+.PHONY : c++_learn/src/regex/all
+
+# Recursive "preinstall" directory target.
+c++_learn/src/regex/preinstall:
+
+.PHONY : c++_learn/src/regex/preinstall
+
+# Recursive "clean" directory target.
+c++_learn/src/regex/clean: c++_learn/src/regex/CMakeFiles/regex.dir/clean
+
+.PHONY : c++_learn/src/regex/clean
+
+#=============================================================================
+# Directory level rules for directory c++_learn/src/udp
+
+# Recursive "all" directory target.
+c++_learn/src/udp/all: c++_learn/src/udp/CMakeFiles/udp.dir/all
+
+.PHONY : c++_learn/src/udp/all
+
+# Recursive "preinstall" directory target.
+c++_learn/src/udp/preinstall:
+
+.PHONY : c++_learn/src/udp/preinstall
+
+# Recursive "clean" directory target.
+c++_learn/src/udp/clean: c++_learn/src/udp/CMakeFiles/udp.dir/clean
+
+.PHONY : c++_learn/src/udp/clean
+
+#=============================================================================
 # Directory level rules for directory c++_learn/src/webocketClient
 
 # Recursive "all" directory target.
@@ -302,7 +407,7 @@ c/bin/CMakeFiles/C_SKX.dir/clean:
 c++_learn/src/classSize/CMakeFiles/skx_classsize.dir/all:
 	$(MAKE) -f c++_learn/src/classSize/CMakeFiles/skx_classsize.dir/build.make c++_learn/src/classSize/CMakeFiles/skx_classsize.dir/depend
 	$(MAKE) -f c++_learn/src/classSize/CMakeFiles/skx_classsize.dir/build.make c++_learn/src/classSize/CMakeFiles/skx_classsize.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=9,10 "Built target skx_classsize"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=18,19 "Built target skx_classsize"
 .PHONY : c++_learn/src/classSize/CMakeFiles/skx_classsize.dir/all
 
 # Build rule for subdir invocation for target.
@@ -329,7 +434,7 @@ c++_learn/src/classSize/CMakeFiles/skx_classsize.dir/clean:
 c++_learn/src/lambda/CMakeFiles/skx_lambda.dir/all:
 	$(MAKE) -f c++_learn/src/lambda/CMakeFiles/skx_lambda.dir/build.make c++_learn/src/lambda/CMakeFiles/skx_lambda.dir/depend
 	$(MAKE) -f c++_learn/src/lambda/CMakeFiles/skx_lambda.dir/build.make c++_learn/src/lambda/CMakeFiles/skx_lambda.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=11,12 "Built target skx_lambda"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=20,21 "Built target skx_lambda"
 .PHONY : c++_learn/src/lambda/CMakeFiles/skx_lambda.dir/all
 
 # Build rule for subdir invocation for target.
@@ -356,7 +461,7 @@ c++_learn/src/lambda/CMakeFiles/skx_lambda.dir/clean:
 c++_learn/src/file/CMakeFiles/filetst.dir/all:
 	$(MAKE) -f c++_learn/src/file/CMakeFiles/filetst.dir/build.make c++_learn/src/file/CMakeFiles/filetst.dir/depend
 	$(MAKE) -f c++_learn/src/file/CMakeFiles/filetst.dir/build.make c++_learn/src/file/CMakeFiles/filetst.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=3,4 "Built target filetst"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=10,11 "Built target filetst"
 .PHONY : c++_learn/src/file/CMakeFiles/filetst.dir/all
 
 # Build rule for subdir invocation for target.
@@ -383,7 +488,7 @@ c++_learn/src/file/CMakeFiles/filetst.dir/clean:
 c++_learn/src/helloWorld/CMakeFiles/hello.dir/all:
 	$(MAKE) -f c++_learn/src/helloWorld/CMakeFiles/hello.dir/build.make c++_learn/src/helloWorld/CMakeFiles/hello.dir/depend
 	$(MAKE) -f c++_learn/src/helloWorld/CMakeFiles/hello.dir/build.make c++_learn/src/helloWorld/CMakeFiles/hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=5,6 "Built target hello"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=12,13 "Built target hello"
 .PHONY : c++_learn/src/helloWorld/CMakeFiles/hello.dir/all
 
 # Build rule for subdir invocation for target.
@@ -410,7 +515,7 @@ c++_learn/src/helloWorld/CMakeFiles/hello.dir/clean:
 c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/all:
 	$(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/depend
 	$(MAKE) -f c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build.make c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=13,14 "Built target wsClient"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=24,25 "Built target wsClient"
 .PHONY : c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/all
 
 # Build rule for subdir invocation for target.
@@ -437,7 +542,7 @@ c++_learn/src/webocketClient/CMakeFiles/wsClient.dir/clean:
 c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/all:
 	$(MAKE) -f c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/build.make c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/depend
 	$(MAKE) -f c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/build.make c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=7,8 "Built target mergefile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=14,15 "Built target mergefile"
 .PHONY : c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/all
 
 # Build rule for subdir invocation for target.
@@ -456,6 +561,141 @@ mergefile: c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/rule
 c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/clean:
 	$(MAKE) -f c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/build.make c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/clean
 .PHONY : c++_learn/src/mergeFile/CMakeFiles/mergefile.dir/clean
+
+#=============================================================================
+# Target rules for target c++_learn/src/regex/CMakeFiles/regex.dir
+
+# All Build rule for target.
+c++_learn/src/regex/CMakeFiles/regex.dir/all:
+	$(MAKE) -f c++_learn/src/regex/CMakeFiles/regex.dir/build.make c++_learn/src/regex/CMakeFiles/regex.dir/depend
+	$(MAKE) -f c++_learn/src/regex/CMakeFiles/regex.dir/build.make c++_learn/src/regex/CMakeFiles/regex.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=16,17 "Built target regex"
+.PHONY : c++_learn/src/regex/CMakeFiles/regex.dir/all
+
+# Build rule for subdir invocation for target.
+c++_learn/src/regex/CMakeFiles/regex.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 c++_learn/src/regex/CMakeFiles/regex.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 0
+.PHONY : c++_learn/src/regex/CMakeFiles/regex.dir/rule
+
+# Convenience name for target.
+regex: c++_learn/src/regex/CMakeFiles/regex.dir/rule
+
+.PHONY : regex
+
+# clean rule for target.
+c++_learn/src/regex/CMakeFiles/regex.dir/clean:
+	$(MAKE) -f c++_learn/src/regex/CMakeFiles/regex.dir/build.make c++_learn/src/regex/CMakeFiles/regex.dir/clean
+.PHONY : c++_learn/src/regex/CMakeFiles/regex.dir/clean
+
+#=============================================================================
+# Target rules for target c++_learn/src/cjson/CMakeFiles/cjsontest.dir
+
+# All Build rule for target.
+c++_learn/src/cjson/CMakeFiles/cjsontest.dir/all:
+	$(MAKE) -f c++_learn/src/cjson/CMakeFiles/cjsontest.dir/build.make c++_learn/src/cjson/CMakeFiles/cjsontest.dir/depend
+	$(MAKE) -f c++_learn/src/cjson/CMakeFiles/cjsontest.dir/build.make c++_learn/src/cjson/CMakeFiles/cjsontest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=5,6,7 "Built target cjsontest"
+.PHONY : c++_learn/src/cjson/CMakeFiles/cjsontest.dir/all
+
+# Build rule for subdir invocation for target.
+c++_learn/src/cjson/CMakeFiles/cjsontest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 c++_learn/src/cjson/CMakeFiles/cjsontest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 0
+.PHONY : c++_learn/src/cjson/CMakeFiles/cjsontest.dir/rule
+
+# Convenience name for target.
+cjsontest: c++_learn/src/cjson/CMakeFiles/cjsontest.dir/rule
+
+.PHONY : cjsontest
+
+# clean rule for target.
+c++_learn/src/cjson/CMakeFiles/cjsontest.dir/clean:
+	$(MAKE) -f c++_learn/src/cjson/CMakeFiles/cjsontest.dir/build.make c++_learn/src/cjson/CMakeFiles/cjsontest.dir/clean
+.PHONY : c++_learn/src/cjson/CMakeFiles/cjsontest.dir/clean
+
+#=============================================================================
+# Target rules for target c++_learn/src/BFS/CMakeFiles/bfs.dir
+
+# All Build rule for target.
+c++_learn/src/BFS/CMakeFiles/bfs.dir/all:
+	$(MAKE) -f c++_learn/src/BFS/CMakeFiles/bfs.dir/build.make c++_learn/src/BFS/CMakeFiles/bfs.dir/depend
+	$(MAKE) -f c++_learn/src/BFS/CMakeFiles/bfs.dir/build.make c++_learn/src/BFS/CMakeFiles/bfs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=3,4 "Built target bfs"
+.PHONY : c++_learn/src/BFS/CMakeFiles/bfs.dir/all
+
+# Build rule for subdir invocation for target.
+c++_learn/src/BFS/CMakeFiles/bfs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 c++_learn/src/BFS/CMakeFiles/bfs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 0
+.PHONY : c++_learn/src/BFS/CMakeFiles/bfs.dir/rule
+
+# Convenience name for target.
+bfs: c++_learn/src/BFS/CMakeFiles/bfs.dir/rule
+
+.PHONY : bfs
+
+# clean rule for target.
+c++_learn/src/BFS/CMakeFiles/bfs.dir/clean:
+	$(MAKE) -f c++_learn/src/BFS/CMakeFiles/bfs.dir/build.make c++_learn/src/BFS/CMakeFiles/bfs.dir/clean
+.PHONY : c++_learn/src/BFS/CMakeFiles/bfs.dir/clean
+
+#=============================================================================
+# Target rules for target c++_learn/src/DFS/CMakeFiles/dfs.dir
+
+# All Build rule for target.
+c++_learn/src/DFS/CMakeFiles/dfs.dir/all:
+	$(MAKE) -f c++_learn/src/DFS/CMakeFiles/dfs.dir/build.make c++_learn/src/DFS/CMakeFiles/dfs.dir/depend
+	$(MAKE) -f c++_learn/src/DFS/CMakeFiles/dfs.dir/build.make c++_learn/src/DFS/CMakeFiles/dfs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=8,9 "Built target dfs"
+.PHONY : c++_learn/src/DFS/CMakeFiles/dfs.dir/all
+
+# Build rule for subdir invocation for target.
+c++_learn/src/DFS/CMakeFiles/dfs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 c++_learn/src/DFS/CMakeFiles/dfs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 0
+.PHONY : c++_learn/src/DFS/CMakeFiles/dfs.dir/rule
+
+# Convenience name for target.
+dfs: c++_learn/src/DFS/CMakeFiles/dfs.dir/rule
+
+.PHONY : dfs
+
+# clean rule for target.
+c++_learn/src/DFS/CMakeFiles/dfs.dir/clean:
+	$(MAKE) -f c++_learn/src/DFS/CMakeFiles/dfs.dir/build.make c++_learn/src/DFS/CMakeFiles/dfs.dir/clean
+.PHONY : c++_learn/src/DFS/CMakeFiles/dfs.dir/clean
+
+#=============================================================================
+# Target rules for target c++_learn/src/udp/CMakeFiles/udp.dir
+
+# All Build rule for target.
+c++_learn/src/udp/CMakeFiles/udp.dir/all:
+	$(MAKE) -f c++_learn/src/udp/CMakeFiles/udp.dir/build.make c++_learn/src/udp/CMakeFiles/udp.dir/depend
+	$(MAKE) -f c++_learn/src/udp/CMakeFiles/udp.dir/build.make c++_learn/src/udp/CMakeFiles/udp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles --progress-num=22,23 "Built target udp"
+.PHONY : c++_learn/src/udp/CMakeFiles/udp.dir/all
+
+# Build rule for subdir invocation for target.
+c++_learn/src/udp/CMakeFiles/udp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 c++_learn/src/udp/CMakeFiles/udp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shikaixun/shikaixun_HDD/home/shikaixun/Code/skx/skx/build/CMakeFiles 0
+.PHONY : c++_learn/src/udp/CMakeFiles/udp.dir/rule
+
+# Convenience name for target.
+udp: c++_learn/src/udp/CMakeFiles/udp.dir/rule
+
+.PHONY : udp
+
+# clean rule for target.
+c++_learn/src/udp/CMakeFiles/udp.dir/clean:
+	$(MAKE) -f c++_learn/src/udp/CMakeFiles/udp.dir/build.make c++_learn/src/udp/CMakeFiles/udp.dir/clean
+.PHONY : c++_learn/src/udp/CMakeFiles/udp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
