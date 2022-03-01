@@ -14,7 +14,7 @@ int main(){
     cout << "test.a val:" << test->a <<endl;
 
     cout <<"test.b addr:"<<&(test->b)<<endl;
-    cout <<"test.b val:" << test->b <<endl;石凯勋
+    cout <<"test.b val:" << test->b <<endl;
     return 0;
 }
 

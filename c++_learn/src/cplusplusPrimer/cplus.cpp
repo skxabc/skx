@@ -1,29 +1,35 @@
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
-#include "Sales_item.h"
+#include <string>
+// #include "Sales_item.h"
+#include "Sales_data.h"
 using namespace std;
+
+
 int main()
 {
-    //read a group record of sales
-    // fstream file;
-    // file.open("/Users/shikaixun/Desktop/skx/c++_learn/src/cplusplusPrimer/testData/book_sales");
-     freopen("/Users/shikaixun/Desktop/skx/c++_learn/src/cplusplusPrimer/testData/book_sales","r", stdin);
-    // cout<< "errno" << errno << "descr:" << strerror(errno) <<endl;
-    // // vector<Sales_item> saleRecord;
-    // Sales_item book;
-    // if(!file)cout << "open file failed" <<endl; 
-    // // file >> book;
-    // // cout << book << endl;
-    // while(file.get()){
-    //      cout << book << endl;
-    // }
-    Sales_item book;
-    int i = 4;
-    while(i--){
-        cin >> book;
-        cout << book << endl;
+    Sales_data data1, data2;
+    double price = 0;
+    cin >> data1.bookNo >> data1.units_sold >> price;
+    data1.revenue = data1.units_sold * price;
+    cin >> data2.bookNo >> data2.units_sold >> price;
+    data2.revenue = data2.units_sold * price;
+    
+    if(data1.bookNo == data2.bookNo){
+        unsigned totalCnt = data1.units_sold + data2.units_sold;
+        double totalRevenue = data1.revenue + data2.revenue;
+         
+        cout << data1.bookNo << " " << totalCnt << " " << totalRevenue << " ";
+
+        if(totalCnt != 0){
+            cout << totalRevenue/totalCnt << endl;
+        }else{
+            cout<< "(no sales)" << endl;
+        }
+    }else{
+        cerr << "data must be refer to the same ISBN" << endl;
+        return -1;
     }
-    //output the record to the screen
     return 0;
 }
