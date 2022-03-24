@@ -7,13 +7,13 @@ typedef struct base_t{
     int64_t a;
     int64_t b;
 }stBase_t;
-int main(){
-    int *p = new int;
-    cout << "p val:"<<p<<endl;
-    stBase_t *test = (stBase_t *)p;
-    cout << "test.a addr:" << &(test->a) << endl;
-    cout << "test.a val:" << test->a <<endl;
-
+// int main(){
+//     int *p = new int;
+//     cout << "p val:"<<p<<endl;
+//     stBase_t *test = (stBase_t *)p;
+//     cout << "test.a addr:" << &(test->a) << endl;
+//     cout << "test.a val:" << test->a <<endl;
+// }
 int main(int argc, char **argv)
 {
     // ofstream filetest;
