@@ -1,1 +1,0 @@
-/usr/bin/cc   -rdynamic CMakeFiles/C_SKX.dir/2_dimentional_pointer.o  -o C_SKX 

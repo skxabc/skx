@@ -4,22 +4,19 @@ typedef struct test_
 {
     int a;
     int b;
+    void (*func)();
 }sttest;
-static sttest A;
-void get(sttest *r)
+void (*func1)();
+void callback(sttest* test)
 {
-    r = &A;
-    return;
+    printf("callback hello world a:%d\n",test->a);
 }
+
 int main(int argn, char * argv[])
 {
-    // sttest *A = (sttest *)malloc(sizeof(sttest));
-    // A.a = 1;
-    // A.b = 2;
-    // sttest *B  = (sttest *)malloc(sizeof(sttest));
-    // get(B);
-    // printf("B->a:%d B->b:%d\n",B->a,B->b);
-    char *a = "{\"header\":{\"name\":\"resourceDisWakeupResponse\",\"namespace\":\"resourceConfig\"},\"payload\":{\"ratioActive\":0,\"arrayType\":0,\"boardType\":9,\"debug\":1,\"fileNum\":101,\"energyDiff\":0.1,\"micRatio\":6,\"blockSize\":115200,\"pat";
-    printf("strlen(a):%d", strlen(a));
+    sttest a = {11,22,callback};
+    // a.func(&a);
+    func1 = callback;
+    func1(&a);
     return 0;
 }

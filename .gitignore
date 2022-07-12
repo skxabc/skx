@@ -50,6 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
-./build
-./c/build
-./c++_learn/build
+
+#user file
+build
+c++_learn/build/
+
+#makefile
+Makefile
