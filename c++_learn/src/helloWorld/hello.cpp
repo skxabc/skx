@@ -9,19 +9,6 @@
 #include <future>
 #include <chrono>
  
-<<<<<<< Updated upstream
-std::promise<int> promis;
-int main(int argc, const char * argv[]) {
-    std::future<int> fuResult = promis.get_future();
-    std::thread t([](){
-        std::this_thread::sleep_for(std::chrono::seconds(1));
-        promis.set_value(123);
-    });
-    t.detach();
-    std::cout<<"detach..."<<std::endl;
-    std::cout<<fuResult.get()<<std::endl;
-    return 0;
-=======
 // void* threadFunc(void* p)  
 // {  
 // 	char szTest[1024 * 32] = {0};
@@ -45,7 +32,6 @@ int main(void)
 
 	int *p = nullptr;
 	change(p);
-	cout<<"P:"<<p<<endl;
+	// cout<<"P:"<<p<<endl;
 	return 0;
->>>>>>> Stashed changes
 }

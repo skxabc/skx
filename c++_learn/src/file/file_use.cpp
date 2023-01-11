@@ -7,18 +7,6 @@ typedef struct base_t{
     int64_t a;
     int64_t b;
 }stBase_t;
-<<<<<<< HEAD
-int main(){
-    int *p = new int;
-    cout << "p val:"<<p<<endl;
-    stBase_t *test = (stBase_t *)p;
-    cout << "test.a addr:" << &(test->a) << endl;
-    cout << "test.a val:" << test->a <<endl;
-
-    cout <<"test.b addr:"<<&(test->b)<<endl;
-    cout <<"test.b val:" << test->b <<endl;
-    return 0;
-=======
 // int main(){
 //     int *p = new int;
 //     cout << "p val:"<<p<<endl;
@@ -41,7 +29,6 @@ int main(int argc, char **argv)
         cout<<"index: "<<++i<< endl;
     }
     return 0;    
->>>>>>> d68f195c1ed9cf10faca87eb604d5f9ba6a4eca5
 }
 
 // int main(int argc, char **argv)
