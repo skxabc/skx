@@ -1,2 +1,3 @@
 main.cpp is client
 server.cpp is server   need run in other devices
+use：one window exec：./udp  other window exec:./server 5555

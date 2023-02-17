@@ -85,13 +85,14 @@ int main(int argc, char const *argv[])
     {
         struct timeval start, end;
         get_current_time(&start);
-        printf("begin\n");
-        int sockfd = send_udp_packet("10.180.97.83", "5555", "hello");
+        printf("begin time:%lld\n",start.tv_sec+start.tv_usec);
+        int sockfd = send_udp_packet("localhost", "5555", "hello");
         printf("udp sent\n");
         recv_udp_packet(sockfd, msg, 256);
         printf("udp recv\n");
         get_current_time(&end);
-        printf("%d\n", diff_time_ms(&start, &end));
+        printf("end time:%lld\n",end.tv_sec+end.tv_usec);
+        // printf("%d\n", diff_time_ms(&start, &end));
         printf("%s\n", msg);
     }
     
