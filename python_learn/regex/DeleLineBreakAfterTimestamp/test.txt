@@ -1,0 +1,8 @@
+2022-11-21 16:53:27.694
+ /uaibot(  443:547818397696) DEBUG  [core][init] #######setClientId: C8631420A55D
+2022-11-21 16:53:27.695
+ /uaibot(  443:547818397696) DEBUG  [core][setClientId]  setClientId = C8631420A55D
+2022-11-21 16:53:27.695
+ /uaibot(  443:547818397696) DEBUG  [core][init] encrypted type flag
+2022-11-21 16:53:27.695
+ /uaibot(  443:547818397696) DEBUG  [core][setEncryptedFlag] set encryped type:12022-11-21 16:53:27.694
