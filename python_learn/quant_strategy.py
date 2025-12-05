@@ -3,7 +3,7 @@
 基于“高点创新高持有，跌破前低清仓，并忽略被包住K线”的简易量化策略。
 
 默认标的：中国平安（601318.SH），可通过 --csv 指定本地数据。
-依赖：pandas，可选依赖 akshare 或 yfinance（任一存在即可自动取数）。
+依赖：pandas，可选依赖 akshare 或 yfinance（任一存在即可自动取数，支持自定义 ticker）。
 """
 
 from __future__ import annotations
@@ -20,6 +20,17 @@ def _to_float(value) -> float:
     if isinstance(value, pd.Series):
         return float(value.iloc[0])
     return float(value)
+
+
+def _akshare_symbol_from_ticker(ticker: str) -> Optional[str]:
+    code = ticker.upper()
+    for suffix in (".SS", ".SH", ".SZ", ".SZSE", ".SSE"):
+        if code.endswith(suffix):
+            code = code.split(".")[0]
+            break
+    if code.isdigit() and len(code) == 6:
+        return code
+    return None
 
 
 def _load_from_csv(csv_path: Path) -> pd.DataFrame:
@@ -51,7 +62,11 @@ def _load_from_csv(csv_path: Path) -> pd.DataFrame:
     return df[list(required | {"volume"}) if "volume" in df.columns else list(required)]
 
 
-def _try_load_from_akshare(start: str, end: Optional[str]) -> Optional[pd.DataFrame]:
+def _try_load_from_akshare(
+    symbol: Optional[str], start: str, end: Optional[str]
+) -> Optional[pd.DataFrame]:
+    if not symbol:
+        return None
     try:
         import akshare as ak  # type: ignore
     except ModuleNotFoundError:
@@ -60,7 +75,7 @@ def _try_load_from_akshare(start: str, end: Optional[str]) -> Optional[pd.DataFr
     end_fmt = end.replace("-", "") if end else None
     try:
         raw = ak.stock_zh_a_hist(
-            symbol="601318",
+            symbol=symbol,
             period="daily",
             start_date=start_fmt,
             end_date=end_fmt,
@@ -84,13 +99,13 @@ def _try_load_from_akshare(start: str, end: Optional[str]) -> Optional[pd.DataFr
     return raw[["date", "open", "high", "low", "close", "volume"]]
 
 
-def _try_load_from_yfinance(start: str, end: Optional[str]) -> Optional[pd.DataFrame]:
+def _try_load_from_yfinance(ticker: str, start: str, end: Optional[str]) -> Optional[pd.DataFrame]:
     try:
         import yfinance as yf  # type: ignore
     except ModuleNotFoundError:
         return None
     try:
-        data = yf.download("601318.SS", start=start, end=end, progress=False, auto_adjust=True)
+        data = yf.download(ticker, start=start, end=end, progress=False, auto_adjust=True)
     except Exception:
         return None
     if data.empty:
@@ -109,14 +124,25 @@ def _try_load_from_yfinance(start: str, end: Optional[str]) -> Optional[pd.DataF
     return data[["date", "open", "high", "low", "close", "volume"]]
 
 
-def load_market_data(csv: Optional[Path], start: str, end: Optional[str]) -> pd.DataFrame:
+def load_market_data(
+    csv: Optional[Path], ticker: str, start: str, end: Optional[str]
+) -> pd.DataFrame:
     if csv:
         return _load_from_csv(csv)
-    for loader in (_try_load_from_akshare, _try_load_from_yfinance):
-        data = loader(start, end)
+
+    ak_symbol = _akshare_symbol_from_ticker(ticker)
+    loader_calls = []
+    if ak_symbol:
+        loader_calls.append(lambda: _try_load_from_akshare(ak_symbol, start, end))
+    loader_calls.append(lambda: _try_load_from_yfinance(ticker, start, end))
+
+    for call in loader_calls:
+        data = call()
         if data is not None:
             return data
-    raise RuntimeError("无法自动获取数据，请通过 --csv 提供包含 date/open/high/low/close 的文件。")
+    raise RuntimeError(
+        f"无法自动获取 {ticker} 的数据，请通过 --csv 提供包含 date/open/high/low/close 的文件。"
+    )
 
 
 def filter_bars(df: pd.DataFrame) -> Tuple[pd.DataFrame, List[int]]:
@@ -231,12 +257,17 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--start", default="2018-01-01", help="回测开始日期，默认2018-01-01")
     parser.add_argument("--end", default=None, help="回测结束日期，默认为今日")
     parser.add_argument("--capital", type=float, default=1_000_000, help="初始资金，默认100万")
+    parser.add_argument(
+        "--ticker",
+        default="601318.SS",
+        help="标的代码（yfinance 格式，如 601318.SS 或 9880.HK），默认中国平安A股",
+    )
     return parser.parse_args(argv)
 
 
 def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parse_args(argv)
-    market = load_market_data(args.csv, args.start, args.end)
+    market = load_market_data(args.csv, args.ticker, args.start, args.end)
     prepared, trades = run_strategy(market, args.capital)
 
     print("=== 策略过滤后的K线统计 ===")
