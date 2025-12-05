@@ -16,6 +16,12 @@ from typing import List, Optional, Sequence, Tuple
 import pandas as pd
 
 
+def _to_float(value) -> float:
+    if isinstance(value, pd.Series):
+        return float(value.iloc[0])
+    return float(value)
+
+
 def _load_from_csv(csv_path: Path) -> pd.DataFrame:
     df = pd.read_csv(csv_path)
     date_col = next((col for col in df.columns if col.lower().startswith("date")), None)
@@ -116,25 +122,31 @@ def load_market_data(csv: Optional[Path], start: str, end: Optional[str]) -> pd.
 def filter_bars(df: pd.DataFrame) -> Tuple[pd.DataFrame, List[int]]:
     """根据包含关系忽略被包住的K线，返回标记后的DataFrame以及有效索引列表。"""
     work = df.sort_values("date").reset_index(drop=True).copy()
-    work["ignored"] = False
+    work = work.loc[:, ~work.columns.duplicated()].copy()
+    ignored_flags = [False] * len(work)
     considered: List[int] = []
     for idx, row in work.iterrows():
         if not considered:
             considered.append(idx)
             continue
+        row_high = _to_float(row["high"])
+        row_low = _to_float(row["low"])
         while considered:
             prev_idx = considered[-1]
             prev = work.loc[prev_idx]
-            if row["high"] <= prev["high"] and row["low"] >= prev["low"]:
-                work.at[idx, "ignored"] = True
+            prev_high = _to_float(prev["high"])
+            prev_low = _to_float(prev["low"])
+            if row_high <= prev_high and row_low >= prev_low:
+                ignored_flags[idx] = True
                 break
-            if row["high"] >= prev["high"] and row["low"] <= prev["low"]:
-                work.at[prev_idx, "ignored"] = True
+            if row_high >= prev_high and row_low <= prev_low:
+                ignored_flags[prev_idx] = True
                 considered.pop()
                 continue
             break
-        if not work.at[idx, "ignored"]:
+        if not ignored_flags[idx]:
             considered.append(idx)
+    work["ignored"] = ignored_flags
     return work, considered
 
 
@@ -163,14 +175,18 @@ def run_strategy(df: pd.DataFrame, initial_capital: float) -> Tuple[pd.DataFrame
     for idx in valid_indices[1:]:
         row = prepared.loc[idx]
         ref = prepared.loc[last_idx]
+        row_high = _to_float(row["high"])
+        row_low = _to_float(row["low"])
+        ref_high = _to_float(ref["high"])
+        ref_low = _to_float(ref["low"])
         action = "wait"
-        price = row["close"]
-        if row["low"] < ref["low"] and position == 1:
+        price = _to_float(row["close"])
+        if row_low < ref_low and position == 1:
             cash = shares * price
             shares = 0.0
             position = 0
             action = "sell"
-        elif row["high"] > ref["high"]:
+        elif row_high > ref_high:
             if position == 0:
                 shares = cash / price
                 cash = 0.0
@@ -184,8 +200,8 @@ def run_strategy(df: pd.DataFrame, initial_capital: float) -> Tuple[pd.DataFrame
                 date=row["date"],
                 action=action,
                 price=price,
-                ref_high=ref["high"],
-                ref_low=ref["low"],
+                ref_high=ref_high,
+                ref_low=ref_low,
                 position=position,
                 cash=round(cash, 2),
                 shares=round(shares, 4),
