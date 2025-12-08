@@ -57,3 +57,6 @@ c++_learn/build/
 
 #makefile
 Makefile
+
+# macOS
+.DS_Store
