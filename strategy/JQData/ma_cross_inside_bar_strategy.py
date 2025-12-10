@@ -1,5 +1,5 @@
 """
-基于 JQData 的简单均线+内外包线回测示例。
+基于 JQData 的均线+内外包线回测示例，增强了过滤和风控参数。
 
 策略规则（多头为例）：
 - 5 日均线向上突破 10 日均线时建仓（全仓）。
@@ -16,8 +16,9 @@ from jqdatasdk import *
 from datetime import date
 import os
 import argparse
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Optional, Dict, Any
 
+import numpy as np
 import pandas as pd
 from dateutil.relativedelta import relativedelta
 from jqdatasdk import auth, logout, get_price
@@ -58,6 +59,16 @@ def run_backtest(
     password: str = "Shitou+6819815",
     start_date: Optional[date] = None,
     end_date: Optional[date] = None,
+    ma_short: int = 5,
+    ma_long: int = 10,
+    trend_ma: Optional[int] = 20,
+    vol_lookback: int = 10,
+    vol_mult: float = 1.0,
+    atr_lookback: int = 14,
+    atr_mult: float = 2.0,
+    max_hold_days: Optional[int] = None,
+    fee_rate: float = 0.0005,
+    slippage_bp: float = 1.0,
 ) -> None:
     today = date.today()
     # 默认区间：向前 15 个月到向前 3 个月，再与账号权限窗口取交集
@@ -89,41 +100,77 @@ def run_backtest(
             print("未取到数据，请检查代码或权限。")
             return
 
-        df["ma5"] = df["close"].rolling(5).mean()
-        df["ma10"] = df["close"].rolling(10).mean()
+        df["ma_short"] = df["close"].rolling(ma_short).mean()
+        df["ma_long"] = df["close"].rolling(ma_long).mean()
+        if trend_ma:
+            df["ma_trend"] = df["close"].rolling(trend_ma).mean()
+        df["vol_mean"] = df["volume"].rolling(vol_lookback).mean()
+        # ATR
+        tr1 = df["high"] - df["low"]
+        tr2 = (df["high"] - df["close"].shift()).abs()
+        tr3 = (df["low"] - df["close"].shift()).abs()
+        tr = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
+        df["atr"] = tr.rolling(atr_lookback).mean()
 
         highs, lows, closes = df["high"].values, df["low"].values, df["close"].values
         effective: List[int] = []
 
         cash = 1.0  # 初始资金
         shares = 0.0
-        trades = []
+        trades: List[Tuple[Any, str, float]] = []
+        peak_close = None
+        entry_idx = None
 
         for i in range(len(df)):
             # 均线金叉开仓
-            if (
-                shares == 0
-                and i >= 1
-                and pd.notna(df["ma10"].iloc[i])
-                and df["ma5"].iloc[i - 1] <= df["ma10"].iloc[i - 1]
-                and df["ma5"].iloc[i] > df["ma10"].iloc[i]
-            ):
-                shares = cash / closes[i]
-                cash = 0.0
-                trades.append((df.index[i], "BUY", closes[i]))
+            if shares == 0:
+                cond_ma = (
+                    i >= 1
+                    and pd.notna(df["ma_long"].iloc[i])
+                    and df["ma_short"].iloc[i - 1] <= df["ma_long"].iloc[i - 1]
+                    and df["ma_short"].iloc[i] > df["ma_long"].iloc[i]
+                )
+                cond_trend = True if trend_ma is None else closes[i] > df["ma_trend"].iloc[i]
+                cond_vol = True if vol_mult <= 0 else (pd.notna(df["vol_mean"].iloc[i]) and df["volume"].iloc[i] > df["vol_mean"].iloc[i] * vol_mult)
+                if cond_ma and cond_trend and cond_vol:
+                    cost = closes[i] * (fee_rate + slippage_bp / 10000)
+                    shares = cash / (closes[i] + cost)
+                    cash = 0.0
+                    trades.append((df.index[i], "BUY", closes[i]))
+                    peak_close = closes[i]
+                    entry_idx = i
 
             included, prev_eff = _add_effective_bar(effective, highs, lows, i)
 
             # 持仓中且当前有效 K 线跌破上一有效 K 线低点 -> 清仓
             if shares > 0 and included and prev_eff is not None:
-                if lows[i] < lows[prev_eff]:
-                    cash = shares * closes[i]
-                    trades.append((df.index[i], "SELL", closes[i]))
+                # 破前有效低点
+                stop_break = lows[i] < lows[prev_eff]
+                # ATR 移动止损
+                if atr_mult >= 9999:
+                    stop_trail = False
+                elif peak_close is not None and pd.notna(df["atr"].iloc[i]):
+                    peak_close = max(peak_close, closes[i])
+                    trail_stop = peak_close - atr_mult * df["atr"].iloc[i]
+                    stop_trail = closes[i] < trail_stop
+                else:
+                    stop_trail = False
+                # 时间止损
+                hold_days = i - entry_idx if entry_idx is not None else 0
+                time_exit = max_hold_days is not None and hold_days >= max_hold_days
+
+                if stop_break or stop_trail or time_exit:
+                    sell_price = closes[i]
+                    cost = sell_price * (fee_rate + slippage_bp / 10000)
+                    cash = shares * (sell_price - cost)
+                    trades.append((df.index[i], "SELL", sell_price))
                     shares = 0.0
+                    peak_close = None
+                    entry_idx = None
 
         final_value = cash + shares * closes[-1]
         # 统计成交对（买->卖）及绩效
-        trade_pairs = []
+        trade_pairs: List[Dict[str, float]] = []
         buy_price = None
         for ts, side, px in trades:
             if side == "BUY":
@@ -169,6 +216,16 @@ if __name__ == "__main__":
     parser.add_argument("--password", default=os.getenv("JQ_PASSWORD", "Shitou+6819815"), help="JQData 密码，默认取环境变量 JQ_PASSWORD")
     parser.add_argument("--start-date", type=parse_date, default=None, help="回测开始日期，格式 YYYY-MM-DD；不填则默认向前15个月")
     parser.add_argument("--end-date", type=parse_date, default=None, help="回测结束日期，格式 YYYY-MM-DD；不填则默认向前3个月")
+    parser.add_argument("--ma-short", type=int, default=5, help="短期均线周期，默认5")
+    parser.add_argument("--ma-long", type=int, default=10, help="长期均线周期，默认10")
+    parser.add_argument("--trend-ma", type=int, default=20, help="趋势过滤均线周期，设为0关闭，默认20")
+    parser.add_argument("--vol-lookback", type=int, default=10, help="量能均线回看周期，默认10")
+    parser.add_argument("--vol-mult", type=float, default=1.0, help="量能倍数，默认1.0（要求成交量>=均值），设为0关闭")
+    parser.add_argument("--atr-lookback", type=int, default=14, help="ATR计算周期，默认14")
+    parser.add_argument("--atr-mult", type=float, default=2.0, help="ATR止损倍数，默认2.0，设为9999关闭")
+    parser.add_argument("--max-hold-days", type=int, default=None, help="最长持仓天数，默认None（不限制）")
+    parser.add_argument("--fee-rate", type=float, default=0.0005, help="单边手续费率，默认0.0005（万5）")
+    parser.add_argument("--slippage-bp", type=float, default=1.0, help="滑点（基点），默认1.0（1bp=0.01%%）")
     args = parser.parse_args()
 
     # 基本校验：开始 < 结束
@@ -181,5 +238,15 @@ if __name__ == "__main__":
         password=args.password,
         start_date=args.start_date,
         end_date=args.end_date,
+        ma_short=args.ma_short,
+        ma_long=args.ma_long,
+        trend_ma=args.trend_ma if args.trend_ma > 0 else None,
+        vol_lookback=args.vol_lookback,
+        vol_mult=args.vol_mult if args.vol_mult > 0 else 0,
+        atr_lookback=args.atr_lookback,
+        atr_mult=args.atr_mult,
+        max_hold_days=args.max_hold_days,
+        fee_rate=args.fee_rate,
+        slippage_bp=args.slippage_bp,
     )
 

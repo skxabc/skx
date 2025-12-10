@@ -9,6 +9,16 @@ log in:
 - --password JQData 密码（默认取环境变量 JQ_PASSWORD，否则文件内默认）
 - --start-date 回测开始日期，YYYY-MM-DD；默认向前 15 个月
 - --end-date 回测结束日期，YYYY-MM-DD；默认向前 3 个月
+- --ma-short 短均线周期（默认 5）
+- --ma-long 长均线周期（默认 10）
+- --trend-ma 趋势均线周期（默认 20，设为 0/None 可关闭）
+- --vol-lookback 量能均值窗口（默认 10）
+- --vol-mult 量能放大倍数过滤（默认 1.0，>1 表示放量才入场）
+- --atr-lookback ATR 计算窗口（默认 14）
+- --atr-mult ATR 追踪止损倍数（默认 2.0，越大越宽）
+- --max-hold-days 最长持仓天数（默认 None 不限制）
+- --fee-rate 单边手续费率（默认 0.0005，可按市场实际填写）
+- --slippage-bp 滑点，单位 BP（默认 1BP=0.01%）
 
 港股通支持：
 - 标的代码使用 `.XHKG` 后缀（例如 `00700.XHKG`）。
