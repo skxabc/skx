@@ -1,0 +1,23 @@
+pip install jqdatasdk(already installed)
+log in:
+  from jqdatasdk import *
+  auth('18813098345','Shitou+6819815')
+
+命令行参数说明（ma_cross_inside_bar_strategy.py）：
+- --symbol 标的代码（默认取环境变量 JQ_SYMBOL，否则 000001.XSHE）
+- --username JQData 账号（默认取环境变量 JQ_USERNAME，否则文件内默认）
+- --password JQData 密码（默认取环境变量 JQ_PASSWORD，否则文件内默认）
+- --start-date 回测开始日期，YYYY-MM-DD；默认向前 15 个月
+- --end-date 回测结束日期，YYYY-MM-DD；默认向前 3 个月
+
+港股通支持：
+- 标的代码使用 `.XHKG` 后缀（例如 `00700.XHKG`）。
+- 港股通回测时自动关闭前复权参数（`fq=None`），`skip_paused` 也会自动关闭。
+
+常用代码规则（JQData）：
+- 沪市：`600000.XSHG`、`601398.XSHG`、科创板 `688xxx.XSHG`
+- 深市：`000001.XSHE`、`002xxx.XSHE`、创业板 `300xxx.XSHE`
+- 港股/港股通：`00700.XHKG`、`00005.XHKG`、`03690.XHKG`（需有港股数据权限）
+- 指数：上证综指 `000001.XSHG`，深证成指 `399001.XSHE`，沪深300 `000300.XSHG`，中证500 `000905.XSHG`
+- ETF 示例：沪市 `510300.XSHG`，深市 `159915.XSHE`
+- 期货示例：主连 `IF9999.CCFX`，具体合约如 `IF2406.CCFX`
